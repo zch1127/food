@@ -11,19 +11,19 @@ $(function(){
     //               });
 
     // 下载png图片
-     domtoimage.toBlob(document.getElementById('tableId'))
-        .then(function (blob) {
-            window.saveAs(blob, 'my-node.png');
-        });
+     // domtoimage.toBlob(document.getElementById('tableId'))
+     //    .then(function (blob) {
+     //        window.saveAs(blob, 'my-node.png');
+     //    });
 
     // 下载jpeg图片
-    // domtoimage.toJpeg(document.getElementById('my-node'), { quality: 0.95 })
-    //           .then(function (dataUrl) {
-    //               var link = document.createElement('a');
-    //               link.download = 'my-image-name.jpeg';
-    //               link.href = dataUrl;
-    //               link.click();
-    //           });
+    domtoimage.toJpeg(document.getElementById('tableId'), { quality: 0.95 })
+              .then(function (dataUrl) {
+                  var link = document.createElement('a');
+                  link.download = 'my-image-name.jpeg';
+                  link.href = dataUrl;
+                  link.click();
+              });
 
     // var node = document.getElementById('table');
     // domtoimage.toPixelData(node)
