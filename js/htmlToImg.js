@@ -22,6 +22,8 @@ $(function(){
                   var link = document.createElement('a');
                   link.download = 'my-image-name.jpeg';
                   link.href = dataUrl;
+                  link.width ="1242";
+                  link.height ="2208";
                   link.click();
               });
 
